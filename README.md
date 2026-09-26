@@ -47,7 +47,7 @@ No database or external service configuration is required at this stage.
 ## Planned development
 
 - [x] Initial MVC application and repository documentation
-- [ ] Define requirements, roles, and the data model
+- [x] Define requirements, roles, and the data model
 - [ ] Add a database with Entity Framework Core and migrations
 - [ ] Add registration, sign-in, and patient, doctor, and administrator roles
 - [ ] Build department and doctor pages with administration features
