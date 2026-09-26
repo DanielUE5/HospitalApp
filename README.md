@@ -1,6 +1,6 @@
 # HospitalApp
 
-A hospital web application built with ASP.NET Core MVC and C#.
+A multi-hospital platform built with ASP.NET Core MVC and C#, connecting patients with participating hospitals.
 
 The project is being developed incrementally, with small commits for each completed change.
 
@@ -12,7 +12,7 @@ The application currently contains the initial MVC scaffold generated with `dotn
 - Static assets, including Bootstrap, jQuery, and client-side validation libraries.
 - Default error handling and development launch profiles.
 
-Database integration, authentication, appointment booking, and API endpoints are planned and are not implemented yet.
+Database integration, authentication, hospital staff panels, admission requests, offers, payments, appointment booking, and API endpoints are planned and are not implemented yet. The first version will let hospitals manage their published beds in our panel. Integration with existing hospital systems, including price updates through partner APIs where available, is a later roadmap item. Hospitals provide their own prices; platform-defined length-of-stay packages are out of scope. After approval, patients can choose full payment or a hospital-defined deposit.
 
 ## Technology
 
@@ -47,15 +47,28 @@ No database or external service configuration is required at this stage.
 ## Planned development
 
 - [x] Initial MVC application and repository documentation
-- [x] Define requirements, roles, and the data model
+- [x] Define initial requirements and roles
+- [ ] Review and commit the multi-hospital data model and development plan
+- [ ] Create entity models and EF Core configurations
 - [ ] Add a database with Entity Framework Core and migrations
-- [ ] Add registration, sign-in, and patient, doctor, and administrator roles
-- [ ] Build department and doctor pages with administration features
+- [ ] Add registration, sign-in, hospital memberships, and scoped staff roles
+- [ ] Build hospital panels, catalogues, and bed availability management
+- [ ] Implement admission documents, approved offers, reservations, and payments
 - [ ] Implement schedules, appointment booking, and cancellation
 - [ ] Expose REST API endpoints with validation and access control
 - [ ] Test key workflows, including conflicting appointment requests
+- [ ] Integrate a pilot hospital system to reduce duplicate staff work
 
-The database provider and detailed architecture will be selected when the project requirements are finalized.
+PostgreSQL is planned; database integration is not implemented yet. The design is under review before creating entity classes.
+
+Design documents (Bulgarian):
+
+- [Project scope](docs/project-scope.md)
+- [Database design and diagrams](docs/database-design.md)
+- [Research into hospital information systems](docs/database-research.md)
+- [Bulgarian accommodation price research](docs/pricing-research-bg.md)
+- [Multi-hospital concept](docs/multi-hospital-proposal.md)
+- [Development plan](docs/development-plan.md)
 
 ## Project structure
 
